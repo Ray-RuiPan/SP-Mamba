@@ -1,7 +1,7 @@
 # SP-Mamba: Spatial-Perception State Space Model for Unsupervised Medical Anomaly Detection
 This repository contains the code for the paper "SP-Mamba: Spatial-Perception State Space Model for Unsupervised Medical Anomaly Detection" by Rui Pan · Ruiying Lu.
 
-Start with `run.sh`.
+Train and test with `run.sh`.
 
 ## Noting
 Download dataset ZhangLab Chest X-ray from [ZhangLab Chest X-ray](https://drive.google.com/file/d/1SBLq6KwG9ZptLGM3Nk0neF07bMEjiFFB/view?usp=drive_link) and extract it to `/data/zhanglab`.
