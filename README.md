@@ -1,5 +1,5 @@
 # SP-Mamba: Spatial-Perception State Space Model for Unsupervised Medical Anomaly Detection
-This repository contains the code for the paper "[https://arxiv.org/abs/2507.19076](SP-Mamba: Spatial-Perception State Space Model for Unsupervised Medical Anomaly Detection)" by Rui Pan · Ruiying Lu.
+This repository contains the code for the paper "[SP-Mamba: Spatial-Perception State Space Model for Unsupervised Medical Anomaly Detection](https://arxiv.org/abs/2507.19076)" by Rui Pan · Ruiying Lu.
 
 Train and test with `run.sh`.
 
