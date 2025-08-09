@@ -12,5 +12,5 @@ Download dataset Uni-Medical from [Uni-Medical](https://drive.google.com/file/d/
 
 Download the pre-trained ResNet34 from [ResNet34](https://drive.google.com/file/d/1te1fMcfFnq2utwWMDysDKENwep_A9ftC/view?usp=drive_link) and extract it to `/model/pretrain`.
 
-## Welcome to discuss with us (luruiying@xidian.edu.cn) and cite our paper:
+## Welcome to discuss with us (ruipan@stu.xidian.edu.cn) and cite our paper:
 Rui Pan and Ruiying Lu. SP-Mamba: Spatial-Perception State Space Model for Unsupervised Medical Anomaly Detection.
