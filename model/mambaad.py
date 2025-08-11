@@ -652,22 +652,16 @@ class MambaUPNet(nn.Module):
 
 		for batch_idx in range(B):
 			for patch_idx in range(H * W):
-				# 将1D索引转换为2D索引
+				
 				i, j = divmod(patch_idx, patch_size)
-
-				# 计算3x3九宫格的索引范围
-				i_start, i_end = max(0, i - 2), min(patch_size - 1, i + 2)
-				j_start, j_end = max(0, j - 2), min(patch_size - 1, j + 2)
-
-				# 获取3x3九宫格内的所有patch索引
+				i_start, i_end = max(0, i - 1), min(patch_size - 1, i + 1)
+				j_start, j_end = max(0, j - 1), min(patch_size - 1, j + 1)
 				neighbor_indices = [(i_, j_) for i_ in range(i_start, i_end + 1) for j_ in range(j_start, j_end + 1)]
-
-				# 计算相似度
 				for prototype_idx in range(num_prototypes):
 					prototype_patch = self.coreset[patch_idx, prototype_idx]
 					neighbor_patches = H_l[batch_idx, [i_ * patch_size + j_ for (i_, j_) in neighbor_indices]]
 					similarity = F.cosine_similarity(prototype_patch, neighbor_patches, dim=1)
-					similarity_matrix[batch_idx, patch_idx, prototype_idx] = similarity.max()  # 取最大相似度
+					similarity_matrix[batch_idx, patch_idx, prototype_idx] = similarity.max()  
 
 
 
@@ -811,3 +805,4 @@ if __name__ == '__main__':
 		t_e = get_timepc()
 
 	print('[GFLOPs: {:>6.3f}G]\t[Params: {:>6.3f}M]\t[Speed: {:>7.3f}]\n'.format(flops, params, bs * cnt / (t_e - t_s)))
+
