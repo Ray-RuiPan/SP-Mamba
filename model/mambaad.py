@@ -133,10 +133,10 @@ class SCANS(nn.Module):
 			for i in range(r + 1, size - r):
 				j = size - r - 1
 				boundary_indexes.append(i * size + j)
-			for j in range(size - r - 2, r - 1, -1):
+			for j in range(size - r - 1, r - 1, -1):
 				i = size - r - 1
 				boundary_indexes.append(i * size + j)
-			for i in range(size - r - 2, r, -1):
+			for i in range(size - r - 1, r, -1):
 				j = r
 				boundary_indexes.append(i * size + j)
 		return np.array(boundary_indexes)
@@ -809,4 +809,5 @@ if __name__ == '__main__':
 		for _ in range(cnt):
 			y = net(x)
 		t_e = get_timepc()
+
 	print('[GFLOPs: {:>6.3f}G]\t[Params: {:>6.3f}M]\t[Speed: {:>7.3f}]\n'.format(flops, params, bs * cnt / (t_e - t_s)))
